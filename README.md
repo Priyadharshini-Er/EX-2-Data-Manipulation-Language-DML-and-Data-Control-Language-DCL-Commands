@@ -16,7 +16,9 @@ DELETE: It is used to delete records from a database table.<br>
 
 ## Create the table as given below:
 ```sql
-create table manager(enumber number(6),ename char(15),salary number(5),commission number(4),annualsalary number(7),Hiredate date,designation char(10),deptno number(2),reporting char(10));
+create table manager(enumber number(6),ename char(15),
+salary number(5),commission number(4),annualsalary number(7),Hiredate date,
+designation char(10),deptno number(2),reporting char(10));
 ```
 ## insert the following values into the table
 ```sql
@@ -101,14 +103,16 @@ SELECT COUNT(*) AS "Number of Rows" FROM manager;
 
 ### Q13) Find maximum, minimum and average salary in EMP table.
 ### QUERY:
-SELECT MAX(salary) AS "Maximum Salary", MIN(salary) AS "Minimum Salary", AVG(salary) AS "Average Salary" FROM manager;
+SELECT MAX(salary) AS "Maximum Salary", MIN(salary) AS "Minimum Salary",
+AVG(salary) AS "Average Salary" FROM manager;
 ### OUTPUT:
 ![Screenshot 2023-10-04 143301](https://github.com/Priyadharshini-Er/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119558093/ed21ed72-afd4-432e-a850-73740c982a73)
 
 
 ### Q14) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 ### QUERY:
-SELECT designation, COUNT(*) AS "Number of Employees" FROM manager GROUP BY designation ORDER BY COUNT(*) DESC;
+SELECT designation, COUNT(*) AS "Number of Employees" FROM manager 
+GROUP BY designation ORDER BY COUNT(*) DESC;
 ### OUTPUT:
 ![Screenshot 2023-10-04 143358](https://github.com/Priyadharshini-Er/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119558093/131ce569-8f53-4881-b9e2-31422dd46774)
 
